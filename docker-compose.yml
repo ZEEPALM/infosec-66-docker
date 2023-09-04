@@ -14,7 +14,7 @@ services:
   pgadmin:
     container_name: pg-admintest
     ports:
-      - 8080:8080
+      - 8080:80
     environment:
       - PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAUL_EMAIL}
       - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAUL_PASSWORD}
