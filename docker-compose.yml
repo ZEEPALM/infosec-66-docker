@@ -6,8 +6,8 @@ services:
     ports:
       - 54322:5432
     environment:
-      - POSTGRES_USER=${DB_USER}
-      - POSTGRES_PASSWORD=${DB_PASS}
+      - POSTGRES_USER=kanatip
+      - POSTGRES_PASSWORD=0859688800
     image: postgres:latest
     restart: unless-stopped
 
@@ -16,8 +16,8 @@ services:
     ports:
       - 8080:8080
     environment:
-      - PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAUL_EMAIL}
-      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAUL_PASSWORD}
+      - PGADMIN_DEFAULT_EMAIL=kanatip50082@gmail.com
+      - PGADMIN_DEFAULT_PASSWORD=palm8800
     image: dpage/pgadmin4:latest
 
   myapp:
@@ -25,11 +25,11 @@ services:
     ports:
       - 1337:1337
     environment:
-      - DATABASE_CLIENT=${DATABAS_CLIENT}
-      - DATABASE_HOST=${DATABAS_HOST}
-      - DATABASE_PORT=${DATABAS_PORT}
-      - DATABASE_NAME=${DATABAS_NAME}
-      - DATABASE_USERNAME=${DATABAS_USERNAME}
-      - DATABASE_PASSWORD=${DATABAS_PASSWORD}
+      - DATABASE_CLIENT=postgres
+      - DATABASE_HOST=192.168.56.1
+      - DATABASE_PORT=54322
+      - DATABASE_NAME=kanatip
+      - DATABASE_USERNAME=kanatip
+      - DATABASE_PASSWORD=0859688800
       - DATABASE_SSL=false
     image: naskio/strapi:latest
